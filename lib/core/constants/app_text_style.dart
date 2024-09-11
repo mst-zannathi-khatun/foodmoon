@@ -13,3 +13,8 @@ TextStyle appBarSecondaryLocationStyle = const TextStyle(
   color: Colors.white,
   fontSize: 12,
 );
+/// Style for the searchHitText in the home page search bar.
+TextStyle homePageSearchBarHintText = TextStyle(
+  letterSpacing: 1.25,
+  color: Colors.grey.withOpacity(0.9),
+);

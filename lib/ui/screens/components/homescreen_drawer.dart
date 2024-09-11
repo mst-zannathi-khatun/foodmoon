@@ -10,27 +10,31 @@ class HomeScreenDrawer extends StatelessWidget {
     return Drawer(
       child: Column(
         children: <Widget>[
-          const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.white, // Background color
-            ),
-            child: Row(
-              children: <Widget>[
-                CircleAvatar(
-                  radius: 30.0,
-                  backgroundImage: AssetImage(
-                      'assets/profile_pic.png'), // Replace with your image
-                ),
-                SizedBox(width: 16.0),
-                Text(
-                  'Welcome, User!',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
+          const SizedBox(
+            width: double.infinity,
+            child: DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.white, // Background color
+              ),
+              child: Column(
+                children: [
+                  CircleAvatar(
+                    radius: 30.0,
+                    backgroundImage: AssetImage(
+                        'assets/profile_pic.png'), // Replace with your image
                   ),
-                ),
-              ],
+                  SizedBox(width: 16.0),
+                  Spacer(),
+                  Text(
+                    'Welcome, User Name!',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           ListTile(
