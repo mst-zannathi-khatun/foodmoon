@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodmoon/ui/screens/components/homescreen_appbar.dart';
 import 'components/homescreen_drawer.dart';
 import 'components/homescreen_search_bar.dart';
+import 'components/homescreen_searchbarcontainer/searchbarcontainer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,7 +20,8 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         children: [
           /// Search Bar Section
-          HomeScreenSearchBar()
+          HomeScreenSearchBar(),
+          SearchBarContainer(),
         ],
       ),
     );
