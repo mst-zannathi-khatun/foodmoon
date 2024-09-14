@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../core/constants/app_colors.dart';
 
 Widget  buildFoodDeliveryCard(){
@@ -56,17 +57,11 @@ Widget  buildFoodDeliveryCard(){
                 const SizedBox(height: 22),
               ],
             ),
-            const Positioned(
+             Positioned(
               bottom: -10.0,
               // Adjust this value to move the image further down
               right: -10.0,
-              child: Image(
-                image: AssetImage(
-                    "assets/images/foodpicture.png"),
-                height: 150,
-                width: 150,
-                fit: BoxFit.cover,
-              ),
+              child: SvgPicture.asset("assets/images/polarbear.svg", height: 80, width: 80, fit: BoxFit.cover,)
             ),
           ],
         ),
