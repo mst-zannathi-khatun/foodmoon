@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:foodmoon/ui/screens/components/homescreen_appbar.dart';
 import 'components/homescreen_drawer.dart';
-import 'components/homescreen_recommended_order_section/recommended_order.dart';
 import 'components/homescreen_search_bar.dart';
-import 'components/homescreen_searchbarcontainer/searchbarcontainer.dart';
+import 'components/hs_filterbuttonssection/filterbuttonssection.dart';
+import 'components/hs_recommended_order_section/recommended_order.dart';
+import 'components/hs_searchbarcontainer/searchbarcontainer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -22,9 +23,14 @@ class _HomeScreenState extends State<HomeScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           /// Search Bar Section
-          HomeScreenSearchBar(),
+           HomeScreenSearchBar(),
           /// Container Search Bar Section
           SearchBarContainer(),
+          ///
+          SizedBox(
+            height: 16,
+          ),
+          FilterButtonsSection(),
           /// Oder it again sections
           HomeScreenRecommendedOrder(),
         ],
