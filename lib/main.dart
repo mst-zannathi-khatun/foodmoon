@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodmoon/ui/screens/home_screen.dart';
 
+
 void main() {
   runApp(const FoodMoon());
 }
@@ -10,10 +11,11 @@ class FoodMoon extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
   }
 }
+

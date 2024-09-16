@@ -17,7 +17,7 @@ class SearchBarContainer extends StatelessWidget {
       children: [
         Container(
           height: 390,
-          width: double.infinity,
+          width: MediaQuery.of(context).size.width,
           color: AppColors.lightGrey,
         ),
         Padding(

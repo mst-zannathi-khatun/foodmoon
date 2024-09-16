@@ -15,7 +15,7 @@ class HomeScreenSearchBar extends StatelessWidget {
       children: [
         Container(
           height: 55,
-          width: double.infinity,
+          width: MediaQuery.of(context).size.width, // Full screen width
           decoration: BoxDecoration(
             color: AppColors.pinkShadow,
           ),
@@ -24,7 +24,7 @@ class HomeScreenSearchBar extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
           child: SizedBox(
             height: 42,
-            width: double.infinity,
+            width: MediaQuery.of(context).size.width - 20, // Subtract padding
             child: TextField(
               decoration: InputDecoration(
                 hintText: "Search for shops & restaurants",
@@ -36,7 +36,6 @@ class HomeScreenSearchBar extends StatelessWidget {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(90),
                   borderSide: BorderSide.none,
-                  gapPadding: 4.0,
                 ),
                 filled: true,
                 fillColor: Colors.white,
