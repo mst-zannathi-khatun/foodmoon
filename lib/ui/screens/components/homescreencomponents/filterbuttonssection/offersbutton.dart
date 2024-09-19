@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/coustomoutlinebutton_widget.dart';
+import '../../../../widgets/coustomoutlinebutton_widget.dart';
 
-Widget buildCuisinesButton(){
+Widget buildOffersButton (){
   return CustomOutlinedButton(
-    text: 'Cuisines',
+    text: 'Offers',
     icon: Icons.arrow_drop_down,
     onPressed: () {},
   );

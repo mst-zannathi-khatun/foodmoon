@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foodmoon/ui/screens/components/hs_filterbuttonssection/ratingsbutton.dart';
-import 'package:foodmoon/ui/screens/components/hs_filterbuttonssection/sortbutton.dart';
+import 'package:foodmoon/ui/screens/components/homescreencomponents/filterbuttonssection/ratingsbutton.dart';
+import 'package:foodmoon/ui/screens/components/homescreencomponents/filterbuttonssection/sortbutton.dart';
 import 'cuisinesbutton.dart';
 import 'filterbutton.dart';
 import 'offersbutton.dart';

@@ -1,8 +1,8 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import '../../../../core/constants/app_colors.dart';
-import '../../../widgets/foodimagecard_widget.dart';
+
+import '../../../../../core/constants/app_colors.dart';
+import '../../../../widgets/foodimagecard_widget.dart';
 
 class HomeScreenPromotionalSlides extends StatefulWidget {
   const HomeScreenPromotionalSlides({super.key});
@@ -51,7 +51,7 @@ class _HomeScreenPromotionalSlidesState extends State<HomeScreenPromotionalSlide
   @override
   Widget build(BuildContext context) {
     return  Padding(
-      padding: const EdgeInsets.all(8),
+      padding: const EdgeInsets.only(top: 0, right: 8, left: 8, bottom: 0),
       child: Column(
         children: [
           SizedBox(
@@ -81,7 +81,7 @@ class _HomeScreenPromotionalSlidesState extends State<HomeScreenPromotionalSlide
             ),
           ),
           Container(
-            padding: const EdgeInsets.symmetric(vertical: 8),
+            padding: const EdgeInsets.symmetric(vertical: 3),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(2, (index){

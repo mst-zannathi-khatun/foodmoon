@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../../widgets/coustomoutlinebutton_widget.dart';
 
-Widget buildOffersButton (){
+import '../../../../widgets/coustomoutlinebutton_widget.dart';
+
+Widget buildSortButton(){
   return CustomOutlinedButton(
-    text: 'Offers',
+    text: 'Sort',
     icon: Icons.arrow_drop_down,
     onPressed: () {},
   );

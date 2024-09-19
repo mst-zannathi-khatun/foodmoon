@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/foodimagecard_widget.dart';
+import '../../../../widgets/foodimagecard_widget.dart';
+
 
 Widget buildFoodImageCard() {
   return FoodImageCardWidget(
