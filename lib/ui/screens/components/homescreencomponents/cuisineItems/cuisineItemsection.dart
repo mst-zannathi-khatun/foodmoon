@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../../../../../core/constants/app_colors.dart';
 import '../../../../widgets/richtext_widget.dart';
 
-class CuisineItemSection extends StatelessWidget {
-  const CuisineItemSection({
+class CuisineItem extends StatelessWidget {
+  const CuisineItem({
     super.key,
   });
 

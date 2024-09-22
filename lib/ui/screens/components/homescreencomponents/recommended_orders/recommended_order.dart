@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foodmoon/ui/screens/components/homescreencomponents/recommended_order_section/priceanddelivery.dart';
-import 'package:foodmoon/ui/screens/components/homescreencomponents/recommended_order_section/restaurantdetails.dart';
+import 'package:foodmoon/ui/screens/components/homescreencomponents/recommended_orders/priceanddelivery.dart';
+import 'package:foodmoon/ui/screens/components/homescreencomponents/recommended_orders/restaurantdetails.dart';
 import 'deliverytimeandmethod.dart';
 import 'foodimagecard.dart';
 import 'order_header_text.dart';

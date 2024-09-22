@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:foodmoon/ui/screens/components/homescreencomponents/filterbuttonssection/ratingsbutton.dart';
-import 'package:foodmoon/ui/screens/components/homescreencomponents/filterbuttonssection/sortbutton.dart';
+import 'package:foodmoon/ui/screens/components/homescreencomponents/filterbuttons/ratingsbutton.dart';
+import 'package:foodmoon/ui/screens/components/homescreencomponents/filterbuttons/sortbutton.dart';
 import 'cuisinesbutton.dart';
 import 'filterbutton.dart';
 import 'offersbutton.dart';
 
-class FilterButtonsSection extends StatelessWidget {
-  const FilterButtonsSection({
+class FilterButtons extends StatelessWidget {
+  const FilterButtons({
     super.key,
   });
 

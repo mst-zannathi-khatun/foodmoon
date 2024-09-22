@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 import '../../../../../core/constants/app_colors.dart';
 import '../../../../widgets/foodimagecard_widget.dart';
 
-class HomeScreenPromotionalSlides extends StatefulWidget {
-  const HomeScreenPromotionalSlides({super.key});
+class PromotionalSlides extends StatefulWidget {
+  const PromotionalSlides({super.key});
   @override
-  State<HomeScreenPromotionalSlides> createState() => _HomeScreenPromotionalSlidesState();
+  State<PromotionalSlides> createState() => _PromotionalSlidesState();
 }
 
-class _HomeScreenPromotionalSlidesState extends State<HomeScreenPromotionalSlides> {
+class _PromotionalSlidesState extends State<PromotionalSlides> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
   late Timer _timer;

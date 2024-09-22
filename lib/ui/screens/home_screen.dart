@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:foodmoon/ui/screens/components/homescreen_appbar.dart';
 import 'components/homescreen_drawer.dart';
 import 'components/homescreen_search_bar.dart';
-import 'components/homescreencomponents/cuisineItemsection/cuisineItemsection.dart';
-import 'components/homescreencomponents/filterbuttonssection/filterbuttonssection.dart';
-import 'components/homescreencomponents/promotionalslides/homescreenpromotionalslides.dart';
-import 'components/homescreencomponents/recommended_order_section/recommended_order.dart';
+import 'components/homescreencomponents/cuisineItems/cuisineItemsection.dart';
+import 'components/homescreencomponents/discountslides/discountslides.dart';
+import 'components/homescreencomponents/filterbuttons/filterbuttons.dart';
+import 'components/homescreencomponents/promotionalslides/promotionalslides.dart';
+import 'components/homescreencomponents/recommended_orders/recommended_order.dart';
 import 'components/homescreencomponents/searchbarcontainer/searchbarcontainer.dart';
-import 'components/homescreencomponents/topshopssection/topshopssection.dart';
+import 'components/homescreencomponents/shopcategory/shopcategory.dart';
+import 'components/homescreencomponents/topshops/topshops.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,35 +22,43 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: HomeScreenAppBar(),
-      drawer: HomeScreenDrawer(),
+    return Scaffold(
+      appBar: const HomeScreenAppBar(),
+      drawer: const HomeScreenDrawer(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             /// Search Bar Section
-            HomeScreenSearchBar(),
+            const HomeScreenSearchBar(),
+
             /// Container Search Bar Section
-            SearchBarContainer(),
+            const SearchBarContainer(),
+
             /// FilterButtonsSections
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            FilterButtonsSection(),
-            SizedBox(
+            FilterButtons(),
+            const SizedBox(
               height: 16,
             ),
+
             /// Oder it again sections
-            HomeScreenRecommendedOrder(),
-            SizedBox(
+            const HomeScreenRecommendedOrder(),
+            const SizedBox(
               height: 16,
             ),
-            HomeScreenPromotionalSlides(),
+            const PromotionalSlides(),
             //// Cuisine Item Section
-            CuisineItemSection(),
+            CuisineItem(),
+
             /// Top Shops Sections
-            TopShopsSection(),
+            const TopShopsSection(),
+
+            /// shop by category
+            const ShopCategorySection(),
+            DiscountSlides(),
           ],
         ),
       ),
