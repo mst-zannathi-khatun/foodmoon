@@ -7,6 +7,7 @@ import 'components/homescreencomponents/filterbuttonssection/filterbuttonssectio
 import 'components/homescreencomponents/promotionalslides/homescreenpromotionalslides.dart';
 import 'components/homescreencomponents/recommended_order_section/recommended_order.dart';
 import 'components/homescreencomponents/searchbarcontainer/searchbarcontainer.dart';
+import 'components/homescreencomponents/shopcategorysection/shopcategorysection.dart';
 import 'components/homescreencomponents/topshopssection/topshopssection.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,8 +29,10 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             /// Search Bar Section
             HomeScreenSearchBar(),
+
             /// Container Search Bar Section
             SearchBarContainer(),
+
             /// FilterButtonsSections
             SizedBox(
               height: 16,
@@ -38,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 16,
             ),
+
             /// Oder it again sections
             HomeScreenRecommendedOrder(),
             SizedBox(
@@ -46,12 +50,16 @@ class _HomeScreenState extends State<HomeScreen> {
             HomeScreenPromotionalSlides(),
             //// Cuisine Item Section
             CuisineItemSection(),
+
             /// Top Shops Sections
             TopShopsSection(),
+            /// shop by category
+            ShopCategorySection(),
           ],
         ),
       ),
     );
   }
 }
+
 
