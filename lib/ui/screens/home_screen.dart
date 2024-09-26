@@ -5,6 +5,7 @@ import 'components/homescreen_search_bar.dart';
 import 'components/homescreencomponents/cuisineItems/cuisineItemsection.dart';
 import 'components/homescreencomponents/discountslides/discountslides.dart';
 import 'components/homescreencomponents/filterbuttons/filterbuttons.dart';
+import 'components/homescreencomponents/offertags/offertagssection.dart';
 import 'components/homescreencomponents/promotionalslides/promotionalslides.dart';
 import 'components/homescreencomponents/recommended_orders/recommended_order.dart';
 import 'components/homescreencomponents/searchbarcontainer/searchbarcontainer.dart';
@@ -52,11 +53,12 @@ class _HomeScreenState extends State<HomeScreen> {
             TopShopsSection(),
             DiscountSlides(),
             ShopCategorySection(),
-
+            OfferTagsSection(),
           ],
         ),
       ),
     );
   }
 }
+
 
