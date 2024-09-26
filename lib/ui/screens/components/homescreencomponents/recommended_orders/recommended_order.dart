@@ -5,8 +5,8 @@ import 'deliverytimeandmethod.dart';
 import 'foodimagecard.dart';
 import 'order_header_text.dart';
 
-class HomeScreenRecommendedOrder extends StatelessWidget {
-  const HomeScreenRecommendedOrder({
+class RecommendedOrder extends StatelessWidget {
+  const RecommendedOrder({
     super.key,
   });
 

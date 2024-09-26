@@ -50,7 +50,7 @@ class _DiscountSlidesState extends State<DiscountSlides> {
       child: Column(
         children: [
           SizedBox(
-            height: 140,
+            height: 150,
             child: PageView(
               controller: _pageController,
               onPageChanged: (int page) {
@@ -95,7 +95,7 @@ class _DiscountSlidesState extends State<DiscountSlides> {
       children: [
         FoodImageCardWidget(
           imagePath: imagePath,
-          height: 140,
+          height: 150,
           width: double.infinity,
           shadowColor: Colors.black.withOpacity(0.2),
           blurRadius: 8,
