@@ -11,7 +11,6 @@ import 'components/homescreencomponents/searchbarcontainer/searchbarcontainer.da
 import 'components/homescreencomponents/shopcategory/shopcategory.dart';
 import 'components/homescreencomponents/topshops/topshops.dart';
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -22,43 +21,38 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const HomeScreenAppBar(),
-      drawer: const HomeScreenDrawer(),
+    return  Scaffold(
+      appBar: HomeScreenAppBar(),
+      drawer: HomeScreenDrawer(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             /// Search Bar Section
-            const HomeScreenSearchBar(),
-
+            HomeScreenSearchBar(),
             /// Container Search Bar Section
-            const SearchBarContainer(),
-
+            SearchBarContainer(),
             /// FilterButtonsSections
-            const SizedBox(
+            SizedBox(
               height: 16,
             ),
             FilterButtons(),
-            const SizedBox(
+            SizedBox(
               height: 16,
             ),
-
             /// Oder it again sections
-            const HomeScreenRecommendedOrder(),
-            const SizedBox(
+            HomeScreenRecommendedOrder(),
+            SizedBox(
               height: 16,
             ),
-            const PromotionalSlides(),
+            PromotionalSlides(),
             //// Cuisine Item Section
             CuisineItem(),
-
             /// Top Shops Sections
-            const TopShopsSection(),
-
-            /// shop by category
-            const ShopCategorySection(),
+            TopShopsSection(),
             DiscountSlides(),
+            ShopCategorySection(),
+
           ],
         ),
       ),

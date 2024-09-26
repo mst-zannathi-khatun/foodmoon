@@ -19,7 +19,7 @@ class ShopCategorySection extends StatelessWidget {
             text: "hop by category",
           ),
          SizedBox(
-           height: 110,
+           height: 120,
            child: ListView.builder(
                scrollDirection: Axis.horizontal,
                itemCount: 10,
