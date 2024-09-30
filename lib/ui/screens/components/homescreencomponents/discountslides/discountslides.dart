@@ -45,48 +45,45 @@ class _DiscountSlidesState extends State<DiscountSlides> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          SizedBox(
-            height: 150,
-            child: PageView(
-              controller: _pageController,
-              onPageChanged: (int page) {
-                setState(() {
-                  _currentPage = page;
-                });
-              },
-              children: [
-                _buildSlide("assets/images/food.jpeg"),
-                _buildSlide("assets/images/food.jpeg"),
-                _buildSlide("assets/images/food.jpeg"),
-              ],
-            ),
+    return Column(
+      children: [
+        SizedBox(
+          height: 150,
+          child: PageView(
+            controller: _pageController,
+            onPageChanged: (int page) {
+              setState(() {
+                _currentPage = page;
+              });
+            },
+            children: [
+              _buildSlide("assets/images/food.jpeg"),
+              _buildSlide("assets/images/food.jpeg"),
+              _buildSlide("assets/images/food.jpeg"),
+            ],
           ),
-          Container(
-            margin: EdgeInsets.zero,
-            padding: const EdgeInsets.symmetric(vertical: 8),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(3, (index) {
-                return Container(
-                  height: 11,
-                  width: 11,
-                  margin: const EdgeInsets.symmetric(horizontal: 3),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: _currentPage == index
-                        ? AppColors.pinkShadow
-                        : Colors.grey, // Active = pink, Inactive = gray
-                  ),
-                );
-              }),
-            ),
+        ),
+        Container(
+          margin: EdgeInsets.zero,
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: List.generate(3, (index) {
+              return Container(
+                height: 11,
+                width: 11,
+                margin: const EdgeInsets.symmetric(horizontal: 3),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: _currentPage == index
+                      ? AppColors.pinkShadow
+                      : Colors.grey, // Active = pink, Inactive = gray
+                ),
+              );
+            }),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 

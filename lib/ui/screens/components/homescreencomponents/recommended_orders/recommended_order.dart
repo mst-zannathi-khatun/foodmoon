@@ -12,40 +12,37 @@ class RecommendedOrder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          buildOrderHeaderText(),
-          const SizedBox(
-            height: 6,
-          ),
-          SizedBox(
-            height: 217,
-            child: ListView.builder(
-                padding: const EdgeInsets.only(right: 20),
-                scrollDirection: Axis.horizontal,
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.only(right: 16),
-                    child: Column(
-                      children: [
-                        buildFoodImageCard(),
-                        const SizedBox(
-                          height: 4,
-                        ),
-                        buildRestaurantDetails(),
-                        buildPriceAndDelivery(),
-                        buildDeliveryTimeAndMethod(),
-                      ],
-                    ),
-                  );
-                }),
-          )
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        buildOrderHeaderText(),
+        const SizedBox(
+          height: 6,
+        ),
+        SizedBox(
+          height: 217,
+          child: ListView.builder(
+              padding: const EdgeInsets.only(right: 8),
+              scrollDirection: Axis.horizontal,
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.only(right: 8),
+                  child: Column(
+                    children: [
+                      buildFoodImageCard(),
+                      const SizedBox(
+                        height: 4,
+                      ),
+                      buildRestaurantDetails(),
+                      buildPriceAndDelivery(),
+                      buildDeliveryTimeAndMethod(),
+                    ],
+                  ),
+                );
+              }),
+        )
+      ],
     );
   }
 }

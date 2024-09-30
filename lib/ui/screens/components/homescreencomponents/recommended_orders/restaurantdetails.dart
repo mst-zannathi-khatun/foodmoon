@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 
-Widget buildRestaurantDetails(){
-  return const SizedBox(
+import '../../../../../core/constants/app_text_style.dart';
+
+Widget buildRestaurantDetails() {
+  return SizedBox(
     width: 250,
     child: Row(
       children: [
         Expanded(
           child: Text(
             "Al Kaderia Restaurant with a very long name that should be clipped",
-            style: TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 16),
-            overflow: TextOverflow
-                .ellipsis, // Clip text with ellipsis if it's too long
+            style: homeScreensRecommendedOrder,
+            overflow: TextOverflow.ellipsis, // This adds the ellipsis
           ),
         ),
-        Icon(Icons.star, size: 18, color: Colors.amber),
-        SizedBox(width: 2),
-        Text(
+        const Icon(Icons.star, size: 18, color: Colors.amber),
+        const SizedBox(width: 2),
+        const Text(
           "4.7",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        SizedBox(width: 4),
-        Text("25000 +"),
+        const SizedBox(width: 4),
+        const Text("25000 +"),
       ],
     ),
   );

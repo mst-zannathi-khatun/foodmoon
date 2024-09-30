@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-
-import '../../../../../core/constants/app_colors.dart';
 import '../../../../widgets/foodimagecard_widget.dart';
+import 'circularrectangle.dart';
+import 'indicatorrectangle.dart';
 
 class PromotionalSlides extends StatefulWidget {
   const PromotionalSlides({super.key});
@@ -50,72 +50,52 @@ class _PromotionalSlidesState extends State<PromotionalSlides> {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: const EdgeInsets.only(top: 0, right: 8, left: 8, bottom: 0),
-      child: Column(
-        children: [
-          SizedBox(
-            height: 140,
-            child: PageView(
-              controller: _pageController,
-              children: [
-                FoodImageCardWidget(
-                  imagePath: "assets/images/food.jpeg",
-                  height: 140,
-                  width: double.infinity,
-                  shadowColor: Colors.black.withOpacity(0.2),
-                  blurRadius: 8,
-                  offset: const Offset(4, 4),
-                  labelText: "Ad",
-                ),
-                FoodImageCardWidget(
-                  imagePath: "assets/images/food.jpeg",
-                  height: 140,
-                  width: double.infinity,
-                  shadowColor: Colors.black.withOpacity(0.2),
-                  blurRadius: 8,
-                  offset: const Offset(4, 4),
-                  labelText: "Ad",
-                ),
-              ],
-            ),
+    return  Column(
+      children: [
+        SizedBox(
+          height: 170,
+          child: PageView(
+            controller: _pageController,
+            children: [
+              FoodImageCardWidget(
+                imagePath: "assets/images/food.jpeg",
+                height: 170,
+                width: double.infinity,
+                shadowColor: Colors.black.withOpacity(0.2),
+                blurRadius: 8,
+                offset: const Offset(4, 4),
+                labelText: "Ad",
+              ),
+              FoodImageCardWidget(
+                imagePath: "assets/images/world1.jpg",
+                height: 170,
+                width: double.infinity,
+                shadowColor: Colors.black.withOpacity(0.2),
+                blurRadius: 8,
+                offset: const Offset(4, 4),
+                labelText: "Ad",
+              ),
+            ],
           ),
-          Container(
-            padding: const EdgeInsets.symmetric(vertical: 3),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(2, (index){
-                  bool swapPosition = _currentPage % 2==1;
-                  return Row(
-                    children: [
-                      if(swapPosition == (index == 0))
-                      Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 4),
-                        width: 20,
-                        height: 10,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          color: _currentPage == index ? AppColors.pinkShadow : Colors.grey,
-                          borderRadius: BorderRadius.circular(2),
-                        ),
-                      )
-                      else
-                      Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 4),
-                        width: 11,
-                        height: 11,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: _currentPage == index ? AppColors.pinkShadow : Colors.grey,
-                        ),
-                      ),
-                    ],
-                  );
-                })
-            ),
+        ),
+        Container(
+          padding: const EdgeInsets.symmetric(vertical: 3),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(2, (index){
+                bool swapPosition = _currentPage % 2==1;
+                return Row(
+                  children: [
+                    if(swapPosition == (index == 0))
+                      indicatorRectangle(index: index, currentPage: _currentPage)
+                    else
+                      circularIndicator(index: index, currentPage: _currentPage),
+                  ],
+                );
+              })
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

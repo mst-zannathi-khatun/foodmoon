@@ -64,31 +64,49 @@ class HomeScreen extends StatelessWidget {
                 /// Container Search Bar Section
                 SearchBarContainer(),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(5),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       /// FilterButtonsSections
                       SizedBox(
-                        height: 16,
+                        height: 3,
                       ),
                       FilterButtons(),
                       SizedBox(
                         height: 16,
                       ),
                       /// Oder it again sections
-                      RecommendedOrder(),
+                      RecommendedOrder(),  //done
                       SizedBox(
-                        height: 16,
+                        height: 8,
                       ),
                       PromotionalSlides(),
+                      SizedBox(
+                        height: 8,
+                      ),
                       //// Cuisine Item Section
                       CuisineItem(),
                       /// Top Shops Sections
+                      SizedBox(
+                        height: 8,
+                      ),
                       TopShopsSection(),
+                      SizedBox(
+                        height: 8,
+                      ),
                       DiscountSlides(),
+                      SizedBox(
+                        height: 8,
+                      ),
                       ShopCategorySection(),
+                      SizedBox(
+                        height: 8,
+                      ),
                       OfferTagsSection(),
+                      SizedBox(
+                        height: 8,
+                      ),
                       RestaurantCard(),
                     ],
                   ),
